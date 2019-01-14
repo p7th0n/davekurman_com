@@ -1,0 +1,21 @@
+url:        https://www.davekurman.com'
+baseurl:    /
+name:       Dave Kurman
+description: >
+  Computer Systems Analyst / Expertise in
+  computer programming, database, web
+  development
+
+# Build settings
+markdown:   kramdown
+# theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+# Permalinks
+permalink:  pretty
+
+paginate:  5
+paginate_path: "/page:num/"
+version:    1.1
