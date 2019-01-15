@@ -7,15 +7,35 @@ description: >
   development
 
 # Build settings
-markdown:   kramdown
+markdown:             kramdown
+highlighter: rouge
+
+kramdown:
+  input:              GFM
+  syntax_highlighter: rouge
+
+# Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+# span, block element options fall back to global
+syntax_highlighter_opts:
+  # Rouge Options › https://github.com/jneen/rouge#full-options
+  css_class: 'highlight'
+  #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+  span:
+    line_numbers: false
+  block:
+    line_numbers: true
+    start_line: 1
+    wrap: false
+
 # theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
 
 # Permalinks
-permalink:  pretty
+permalink:            pretty
 
-paginate:  5
-paginate_path: "/page:num/"
-version:    1.1
+paginate:             5
+paginate_path:        "/page:num/"
+version:              1.1
+

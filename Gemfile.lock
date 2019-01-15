@@ -79,6 +79,7 @@ DEPENDENCIES
   jekyll-paginate
   minima (~> 2.0)
   pygments.rb
+  rouge
   tzinfo-data
   wdm (~> 0.1.0)
 

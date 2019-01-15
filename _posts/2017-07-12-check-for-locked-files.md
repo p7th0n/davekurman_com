@@ -1,6 +1,6 @@
 ---
 id: 119
-title: Who has that damn Excel file locked
+title: Check for locked files
 date: 2017-07-12T20:36:24+00:00
 author: dave
 layout: post
