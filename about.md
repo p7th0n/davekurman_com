@@ -34,6 +34,6 @@ robotsmeta:
 
 ### This site
 
-This site was built with [Jekyll](https://jekyllrb.com/).  It is hosted on [Github Pages](https://pages.github.com/)
+This site was built with [Jekyll](https://jekyllrb.com/).  It is hosted on [DreamHost](https://www.dreamhost.com/)
 
 ![jekyll](/public/jekyll-logo-2x.png)
