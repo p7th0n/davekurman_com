@@ -31,3 +31,7 @@
 }
 .contact-info img:hover {
 }
+
+p.img {
+    display: inline-block;
+}
