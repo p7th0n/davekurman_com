@@ -39,4 +39,4 @@ Nothing fancy. Ag is super fast and does the heavy lifting. The Python code form
 
 ```
 
-**[Project on GitHub](https://github.com/p7th0n/getTP)[<img class="alignnone" src="https://www.davekurman.com/wp-content/uploads/2017/06/github-mark-300x158.png" alt="" width="65" height="34" />](https://github.com/p7th0n/getTP)**
+[![octocat](https://github.com/favicon.ico)](https://github.com/p7th0n/clipboardlink)

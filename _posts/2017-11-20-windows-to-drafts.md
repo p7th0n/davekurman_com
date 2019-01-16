@@ -26,3 +26,5 @@ title:  "Windows To Drafts"
 * [Drafts Community forum](https://forums.getdrafts.com/t/examples-of-use-of-new-dropbox-integration/2572)
 * [Dropbox v2 /list_folder](https://www.dropbox.com/developers/documentation/http/documentation#files-list_folder)
 * [Dropbox v2 /delete](https://www.dropbox.com/developers/documentation/http/documentation#files-delete)
+
+[![octocat](https://github.com/favicon.ico)](https://github.com/p7th0n/WindowsToDrafts)

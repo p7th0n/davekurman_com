@@ -67,3 +67,5 @@ Update-Module PowerShellGet
 ## Contribute
 
 * Provide feedback or suggestions.
+
+[![octocat](https://github.com/favicon.ico)](https://github.com/p7th0n/Powershell-Profile)

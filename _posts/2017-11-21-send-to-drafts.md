@@ -58,6 +58,4 @@ Get-ChildItem | Send-DosToDrafts
 * [WindowsToDrafts on GitHub](https://github.com/p7th0n/WindowsToDrafts). This repo has the source for the Drafts app Action.
 * Other notes and references for the module.
 
-![octocat](https://github.com/favicon.ico) [Github](https://github.com/p7th0n) ::
-
-Copyright (c) 2018 Dave Kurman. All rights reserved.
+[![octocat](https://github.com/favicon.ico)](https://github.com/p7th0n/Send-ToDrafts)

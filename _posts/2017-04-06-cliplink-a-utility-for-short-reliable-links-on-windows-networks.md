@@ -50,8 +50,4 @@ categories:
 
 NOTE: **Cliplink will not create links for executables [files ending with EXE, COM, BAT, etc.].
 
-### Who am I
-
-* Developed by <dkurman@netsnbytes.com> with lots of help and feedback. I had jobs as I.T. Manager, sysadmin, helpdesk, and programmer for several companies.
-* [@davekurman on Twitter](https://twitter.com/davekurman)
-* [LinkedIn](https://www.linkedin.com/in/davekurman?trk=profile-badge-cta)
+[![octocat](https://github.com/favicon.ico)](https://github.com/p7th0n/clipboardlink)

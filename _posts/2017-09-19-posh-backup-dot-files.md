@@ -20,3 +20,5 @@ This is a PowerShell script to backup dot files and directories on Windows.
 * **If your dot files contain sensitive information do not clone to a public repository.**
 
 > Feedback and suggestions are welcome.
+
+[![octocat](https://github.com/favicon.ico)](https://github.com/p7th0n/posh_backup_dot_files)

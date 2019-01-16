@@ -48,3 +48,5 @@ writeType:          prepend
 - [Org-mode](https://orgmode.org/): Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system.
 - [Org-mode Capture](https://orgmode.org/manual/Capture.html): Capture lets you quickly store notes with little interruption of your work flow.
 - Looking for Org-mode apps for iOS? Check out [Beorg](https://beorgapp.com/) and [MobileOrg](https://mobileorg.github.io/)
+
+[![octocat](https://github.com/favicon.ico)](https://github.com/p7th0n/orgmode_capture_from_draftsapp)
