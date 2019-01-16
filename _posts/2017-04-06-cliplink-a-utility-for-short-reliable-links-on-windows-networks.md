@@ -40,13 +40,17 @@ categories:
 * Click Ok
 * Clipboard-link copies the file/folder name and shortened link to the clipboard
 
-                 [Engineering Documentation]                  file://F:\ENGINE~1
+```bash
 
-                          ^ Name ^                               ^   link  ^
+  [Engineering Documentation]                  file://F:\ENGINE~1
+
+          ^ Name ^                               ^   link  ^
+
+```
 
 NOTE: **Cliplink will not create links for executables [files ending with EXE, COM, BAT, etc.].
 
-### [](https://github.com/p7th0n/clipboardlink#who-am-i)Who am I
+### Who am I
 
 * Developed by <dkurman@netsnbytes.com> with lots of help and feedback. I had jobs as I.T. Manager, sysadmin, helpdesk, and programmer for several companies.
 * [@davekurman on Twitter](https://twitter.com/davekurman)

@@ -1,9 +1,11 @@
-﻿.highlight table td { padding: 5px; }
+﻿
+.highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
-.highlight, .highlight .w {
+.highlight, .highlight, .w {
   color: #93a1a1;
   background-color: #002b36;
 }
+
 .highlight .err {
   color: #002b36;
   background-color: #dc322f;
@@ -75,4 +77,16 @@
 }
 .highlight .ss {
   color: #859900;
+}
+.lineno { 
+    color: #ccc; 
+    display:inline-block; 
+    padding: 0 5px; 
+    border-right:1px solid #fff;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

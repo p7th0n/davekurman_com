@@ -16,19 +16,25 @@ categories:
 Removes large or troublesome blobs like git-filter-branch does, but faster. And written in Scala.
 
 ```bash
+
 bfg --strip-blobs-bigger-than 100M --replace-text banned.txt repo.git
+
 ```
 
 Replace all passwords and listed in a file _(prefix lines 'regex:'; or 'glob:'; if required)_ with `***REMOVED***` wherever they occur in your repository :
 
 ```bash
-bfg <strong>--replace-text passwords.txt</strong>  my-repo.git
+
+bfg --replace-text passwords.txt  my-repo.git
+
 ```
 
 Delete all files named 'id\_rsa' or id\_dsa' :
 
 ```bash
+
 bfg --delete-files id_{dsa,rsa} my-repo.git
+
 ```
 
 ## Using BFG on Windows
@@ -39,30 +45,38 @@ bfg --delete-files id_{dsa,rsa} my-repo.git
 * Make an alias for BFG:
 
 ```bash
+
 java -jar bfg.jar $*
+
 ```
 
 * Make a replace.txt file:
 
 ```bash
+
 PASSWORD        # Replaces PASSWORD with ***REMOVED***
 PASSWORD==>TEST # Replaces PASSWORD with TEST
 PASSWORD==>     # Replaces PASSWORD with blank
                 # You can use Regular Expressions also
+
 ```
 
 * Run this command in the repo folder from Git Bash or Win10 Bash:
 
 ```bash
+
 bfg --replace-text replace.txt
+
 ```
 
 * When bfg is done run these commands
 
 ```bash
+
 git reflog expire -expire=now -all && git gc -prune=now -- aggressive
 
 git push                   # -f may be needed
+
 ```
 
 ## Notes

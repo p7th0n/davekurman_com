@@ -22,6 +22,7 @@ Nothing fancy. Ag is super fast and does the heavy lifting. The Python code form
 * Tasks begin with the line number of the TODO.
 
 ```yaml
+
   gettp:
 
     getTP.py:
@@ -35,8 +36,7 @@ Nothing fancy. Ag is super fast and does the heavy lifting. The Python code form
 
     sample//test.md:
       - line: 5    * TODO: Ad nulla ad Lorem quis et quis in in laborum incididunt adipisicing occaecat id voluptate.
+
 ```
 
 **[Project on GitHub](https://github.com/p7th0n/getTP)[<img class="alignnone" src="https://www.davekurman.com/wp-content/uploads/2017/06/github-mark-300x158.png" alt="" width="65" height="34" />](https://github.com/p7th0n/getTP)**
-
-&nbsp;
