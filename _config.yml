@@ -2,9 +2,9 @@ url:        https://www.davekurman.com'
 baseurl:    /
 name:       Dave Kurman
 description: >
-  Computer Systems Analyst / Expertise in
+  Dave Kurman / Computer Systems Analyst / Expertise in
   computer programming, database, web
-  development
+  development, system administration
 
 # Build settings
 markdown:             kramdown
