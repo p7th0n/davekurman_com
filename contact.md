@@ -8,7 +8,10 @@ guid: https://www.davekurman.com/?page_id=32
 robotsmeta:
   - index,follow
 ---
-<div role="form" class="wpcf7" id="wpcf7-f30-o1" lang="en-US" dir="ltr">
-  <div class="screen-reader-response">
-  </div>
-</div>
+
+![profile-picture](/public/profile-picture.jpg)
+> [LinkedIn -- Dave Kurman](https://www.linkedin.com/in/davekurman/)
+
+> [Github -- p7th0n](https://github.com/p7th0n)
+
+> [Twitter @davekurman](https://twitter.com/davekurman)

@@ -31,3 +31,9 @@ robotsmeta:
     Process Automation<br /> Computer Networks<br /> Projects<br /> Web Development<br /> Customer Support<br /> Database Design/management<br /> Backup/Safeguarding Data<br /> Websites & Applications<br /> Programming
   </p>
 </div>
+
+### This site
+
+This site was built with [Jekyll](https://jekyllrb.com/).  It is hosted on [Github Pages](https://pages.github.com/)
+
+![jekyll](/public/jekyll-logo-2x.png)
