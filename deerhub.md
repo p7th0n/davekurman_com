@@ -10,6 +10,6 @@ robotsmeta:
 ---
 &nbsp;
 
-  * Deerhub.com is a work in progress. The [Wallace Deer Management Association](http://wallacedeermanagement.com) project worked with local land-owners. Deerhub enables many groups to manage deer populations.</span>
+  * Deerhub.com is a work in progress. The [Wallace Deer Management Association](http://wallacedeermanagement.com) project worked with local land-owners. Deerhub enables many groups to manage deer populations.
 
-  * On Twitter, <span data-offset-key="7jo49-0-0"><a href="https://twitter.com/deerhub">@deerhub</a> provides a steady stream of news and articles related to deer management. Daily searches produce interesting news and articles. <a href="https://hootsuite.com">HootSuite </a>manages the Twitter feeds and <a href="https://www.facebook.com/deerhub/">Deerhub</a> Facebook page.</span>
+  * On Twitter, [@deerhub](https://twitter.com/deerhub) provides a steady stream of news and articles related to deer management. Daily searches produce interesting news and articles. [HootSuite](https://hootsuite.com) manages the Twitter feeds and [Deerhub](https://www.facebook.com/deerhub/) Facebook page.

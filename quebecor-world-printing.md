@@ -12,4 +12,4 @@ robotsmeta:
 
   * Provided comprehensive support of the computers, systems, and network for the plant, and for four other corporate locations.
 
-  * Built a custom database, working with Human Resources and management, to support a major expansion. Current personnel data, along with employee-created information and HR projections was used to create a transparent path for advancement to support the expansion. Employees and managers were happy with the results.
+  * Built a custom database, working with Human Resources and management, to support a major expansion. Current personnel data, along with employee-created information and HR projections were used to create a transparent path for advancement to support the expansion. Employees and managers were happy with the results.
