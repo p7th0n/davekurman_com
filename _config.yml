@@ -38,5 +38,5 @@ permalink:            pretty
 
 paginate:             5
 paginate_path:        "/page:num/"
-version:              1.2
+version:              1.3
 
