@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Check for locked files &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/rouge.css">
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12118444-14"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-12118444-14');
+  </script>
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          
+        </a>
+      </h1>
+      <p class="lead">Dave Kurman / Computer Systems Analyst / Expertise in computer programming, database, web development, system administration
+</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/contact/">Contact</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/deerhub/">Deerhub</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/omega-design-corporation/">Omega Design Corporation</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/quebecor-world-printing/">Quebecor World Printing</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/vanguard-id-systems/">Vanguard ID Systems</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/wallace-deer-management-association-website/">WDMA</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+    <div class="contact-info">
+        <a href="https://www.linkedin.com/in/davekurman/" target="_blank" title="  Dave Kurman - LinkedIn  ">
+            <img src="/public/linkedin-logo.png">
+        </a>
+        <a href="https://github.com/p7th0n" target="_blank" title="  Dave Kurman - Github  ">
+            <img src="/public/GitHub_Logo_White.png">
+        </a>
+        <a href="https://twitter.com/davekurman" target="_blank" title="  Dave Kurman - Twitter  ">
+            <img src="/public/twitter-logo.png">
+        </a>
+    </div>
+
+
+      <span class="sidebar-nav-item">v 1.3</span>
+    </nav>
+
+    <p>&copy; 2022. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Check for locked files</h1>
+  <span class="post-date">12 Jul 2017</span>
+  <p>Companies work from Excel, Word and other files on network shared folders. More than one user cannot usually work on these files at the same time. Time is lost tracking down who has the file locked.</p>
+
+<p>It can be hard to see who has a file locked. Sometimes Excel or Word shows who. But not always. Other files like shared PDF’s and CAD file types do not help much.</p>
+
+<p>One way to see who locked a file is from the Windows file server as Administrator. Not practical for security reasons.</p>
+
+<p>This tool has two parts:</p>
+
+<ul>
+  <li>A watcher that checks for locked files. The watcher uses a search list for <em>watched</em> files and folders.</li>
+  <li>A web server that displays the locked files and who locked them. No need for special access. Just check a web page.</li>
+</ul>
+
+<h2 id="quick-setup">Quick setup</h2>
+
+<ul>
+  <li>Clone or download and extract this <a href="https://github.com/p7th0n/check_for_locked_files">Github repo</a> to a folder on the file server.</li>
+  <li>Make sure <a href="https://nodejs.org/en/">NodeJS</a> and npm are installed and on the PATH. Open a command line to the repo location and run <strong>npm install</strong> to initialize.</li>
+  <li>From the same command line start the web server – <strong>npm start</strong>. By default it runs on port 80 so if that is a problem edit <em>package.json</em> <em>scripts/start</em>. Visit <a href="http://fileserver-name/">http://fileserver-name</a>.</li>
+  <li>In a separate command line start File lock watcher <strong>npm run watch</strong> [requires <em><strong>Administrator</strong></em> privledges]</li>
+</ul>
+
+<p><img src="https://github.com/p7th0n/check_for_locked_files/raw/master/wwwroot/assets/img/check-lock-files-screenshot.png" alt="screenshot" /></p>
+
+<p><a href="https://github.com/p7th0n/check_for_locked_files"><img src="https://github.com/favicon.ico" alt="octocat" /></a></p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2017/11/21/send-to-drafts/">
+            Send To Drafts
+            <small>21 Nov 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/11/20/windows-to-drafts/">
+            Windows To Drafts
+            <small>20 Nov 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/11/14/powershell-profile/">
+            Powershell Profile
+            <small>14 Nov 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+</html>
