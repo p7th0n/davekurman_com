@@ -11,7 +11,7 @@ title:  "Got Friends Wilga - useful data"
 * [EGH2 Forwood Farm for MSFS](https://emeraldscenerydesign.com/downloads/docs/MSFS_ForwoodFarm_ReadMe_EULA.pdf)
 
 
-## V SPEEDS - WILGA “HS-SSR”
+### V SPEEDS - WILGA “HS-SSR”
 
 From :[PZL-104 “Wilga” Checklist (abbreviated)](http://www.thaiflyingclub.com/linkwilgachecklist.html)
 
@@ -27,7 +27,7 @@ From :[PZL-104 “Wilga” Checklist (abbreviated)](http://www.thaiflyingclub.co
 - V~parachute~ - 60-80 kts
 
 
-## INFORMATION
+### INFORMATION
 - Takeoff distance (21* flap) - 200 meters
 - Landing distance (44* flap, 3 point landing) - 200 meters
 - Gross weight - 2,866 pounds
