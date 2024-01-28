@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Wilga - "
+title:  "Got Friends Wilga - useful data"
 ---
 
 ## Summary
