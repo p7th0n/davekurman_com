@@ -15,12 +15,12 @@ title:  "Got Friends Wilga - useful data"
 
 From :[PZL-104 “Wilga” Checklist (abbreviated)](http://www.thaiflyingclub.com/linkwilgachecklist.html)
 
-- V<sub></sub>r</sub> (21*) - 48 kts
-- V<sub></sub>x</sub> (21*) - 51 kts
-- V<sub></sub>x</sub> (44*) - 49 kts
-- V<sub></sub>y</sub> (0*) - 62 kts
-- V<sub></sub>a</sub> - 93 kts
-- V<sub></sub>fe~ - 80 kts
+- V<sub>r</sub> (21*) - 48 kts
+- V<sub>x</sub> (21*) - 51 kts
+- V<sub>x</sub> (44*) - 49 kts
+- V<sub>y</sub> (0*) - 62 kts
+- V<sub>a</sub> - 93 kts
+- V<sub>fe</sub> - 80 kts
 - V<sub>ref</sub> (44*) - 67 kts
 - V<sub>s</sub> (0*) - 57 kts
 - V<sub>so</sub> (44*) - 51 kts
