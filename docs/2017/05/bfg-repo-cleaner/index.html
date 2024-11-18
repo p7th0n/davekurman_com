@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      BFG Repo-Cleaner &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/rouge.css">
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12118444-14"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-12118444-14');
+  </script>
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          
+        </a>
+      </h1>
+      <p class="lead">Dave Kurman / Computer Systems Analyst / Expertise in computer programming, database, web development, system administration
+</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/contact/">Contact</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/deerhub/">Deerhub</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/omega-design-corporation/">Omega Design Corporation</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/quebecor-world-printing/">Quebecor World Printing</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/vanguard-id-systems/">Vanguard ID Systems</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/wallace-deer-management-association-website/">WDMA</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+    <div class="contact-info">
+        <a href="https://www.linkedin.com/in/davekurman/" target="_blank" title="  Dave Kurman - LinkedIn  ">
+            <img src="/public/linkedin-logo.png">
+        </a>
+        <a href="https://github.com/p7th0n" target="_blank" title="  Dave Kurman - Github  ">
+            <img src="/public/GitHub_Logo_White.png">
+        </a>
+        <a href="https://twitter.com/davekurman" target="_blank" title="  Dave Kurman - Twitter  ">
+            <img src="/public/twitter-logo.png">
+        </a>
+    </div>
+
+
+      <span class="sidebar-nav-item">v 1.3</span>
+    </nav>
+
+    <p>&copy; 2022. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">BFG Repo-Cleaner</h1>
+  <span class="post-date">30 May 2017</span>
+  <h2 id="bfg-repo-cleaner-is-a-good-tool-to-clean-up-a-git-repository-before-sharing"><a href="https://rtyley.github.io/bfg-repo-cleaner/">BFG Repo-Cleaner</a> is a good tool to clean up a Git repository before sharing</h2>
+
+<p>Removes large or troublesome blobs like git-filter-branch does, but faster. And written in Scala.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+bfg <span class="nt">--strip-blobs-bigger-than</span> 100M <span class="nt">--replace-text</span> banned.txt repo.git
+
+</code></pre></div></div>
+
+<p>Replace all passwords and listed in a file <em>(prefix lines ‘regex:’; or ‘glob:’; if required)</em> with <code class="language-bash highlighter-rouge"><span class="k">***</span>REMOVED<span class="k">***</span></code> wherever they occur in your repository :</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+bfg <span class="nt">--replace-text</span> passwords.txt  my-repo.git
+
+</code></pre></div></div>
+
+<p>Delete all files named ‘id_rsa’ or id_dsa’ :</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+bfg <span class="nt">--delete-files</span> id_<span class="o">{</span>dsa,rsa<span class="o">}</span> my-repo.git
+
+</code></pre></div></div>
+
+<h2 id="using-bfg-on-windows">Using BFG on Windows</h2>
+
+<ul>
+  <li>Use <a href="https://superuser.com/questions/1053633/what-is-git-bash-for-windows-anyway">Git Bash</a> or <a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">Windows 10 Bash</a>.</li>
+  <li>Download and install Java from <a href="https://www.java.com/en/download/manual.jsp">here</a>.</li>
+  <li>Download BFG <a href="https://search.maven.org/remote_content?g=com.madgag&amp;a=bfg&amp;v=LATEST">here</a>.</li>
+  <li>Make an alias for BFG:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+java <span class="nt">-jar</span> bfg.jar <span class="nv">$*</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>Make a replace.txt file:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+PASSWORD        <span class="c"># Replaces PASSWORD with ***REMOVED***</span>
+<span class="nv">PASSWORD</span><span class="o">==&gt;</span>TEST <span class="c"># Replaces PASSWORD with TEST</span>
+<span class="nv">PASSWORD</span><span class="o">==&gt;</span>     <span class="c"># Replaces PASSWORD with blank</span>
+                <span class="c"># You can use Regular Expressions also</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>Run this command in the repo folder from Git Bash or Win10 Bash:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+bfg <span class="nt">--replace-text</span> replace.txt
+
+</code></pre></div></div>
+
+<ul>
+  <li>When bfg is done run these commands</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+git reflog expire <span class="nt">-expire</span><span class="o">=</span>now <span class="nt">-all</span> <span class="o">&amp;&amp;</span> git gc <span class="nt">-prune</span><span class="o">=</span>now <span class="nt">--</span> aggressive
+
+git push                   <span class="c"># -f may be needed</span>
+
+</code></pre></div></div>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+  <li>I had already pushed the repo and shared it.  That got complicated by multiple branches.  My fault.  It would have been much simpler to run bfg before sharing.</li>
+  <li>I fumbled a bit trying to get bfg running in Windows command shell.</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="https://stackoverflow.com/questions/tagged/bfg-repo-cleaner">StackOverflow</a></li>
+  <li><a href="https://stackoverflow.com/questions/tagged/bfg-repo-cleaner">Removing Keys, Passwords and Other Sensitive Data from Old Github Commits on OSX</a></li>
+  <li><a href="https://rtyley.github.io/bfg-repo-cleaner/">BFG Repo-Cleaner – Removes large or troublesome blobs like git-filter-branch does, but faster. And written in Scala.</a></li>
+  <li><a href="https://github.com/IBM/BluePic/wiki/Using-BFG-Repo-Cleaner-tool-to-remove-sensitive-files-from-your-git-repo">Using BFG Repo Cleaner tool to remove sensitive files from your git repo</a></li>
+  <li><a href="https://github.com/IBM/BluePic/wiki/Using-BFG-Repo-Cleaner-tool-to-remove-sensitive-files-from-your-git-repo">The BFG Repo Cleaner</a></li>
+</ul>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2017/11/21/send-to-drafts/">
+            Send To Drafts
+            <small>21 Nov 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/11/20/windows-to-drafts/">
+            Windows To Drafts
+            <small>20 Nov 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/11/14/powershell-profile/">
+            Powershell Profile
+            <small>14 Nov 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+</html>

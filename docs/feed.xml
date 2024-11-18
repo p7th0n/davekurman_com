@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://www.davekurman.com'/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.davekurman.com'/" rel="alternate" type="text/html" /><updated>2022-06-11T19:26:08-04:00</updated><id>https://www.davekurman.com'/feed.xml</id><title type="html">Dave Kurman</title><subtitle>Dave Kurman / Computer Systems Analyst / Expertise in computer programming, database, web development, system administration
+</subtitle><entry><title type="html">Send To Drafts</title><link href="https://www.davekurman.com'/2017/11/21/send-to-drafts/" rel="alternate" type="text/html" title="Send To Drafts" /><published>2017-11-21T00:00:00-05:00</published><updated>2017-11-21T00:00:00-05:00</updated><id>https://www.davekurman.com'/2017/11/21/send-to-drafts</id><content type="html" xml:base="https://www.davekurman.com'/2017/11/21/send-to-drafts/">&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Send text from Windows to &lt;a href=&quot;https://getdrafts.com/&quot;&gt;Drafts&lt;/a&gt; app. Drafts is an iOS app.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Drafts. Where Text Starts.&lt;/p&gt;
+
+  &lt;p&gt;Drafts lets you turn text into action – it’s a quick notebook, handy editor, and writing automation tool, all in one.&lt;/p&gt;
+
+  &lt;p&gt;– from the website&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sends Windows clipboard text to Drafts by way of Dropbox.&lt;/li&gt;
+  &lt;li&gt;Sends PowerShell command line output to Drafts.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Download or clone this repo to your &lt;em&gt;~/Documents/WindowsPowerShell/Modules&lt;/em&gt; folder.&lt;/li&gt;
+  &lt;li&gt;Add &lt;em&gt;import-module Send-ToDrafts&lt;/em&gt; in your &lt;em&gt;$PROFILE&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Create the Drafts folder at &lt;em&gt;~/Dropbox/Drafts&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;From the Drafts Action Directory install &lt;a href=&quot;https://actions.getdrafts.com/a/1Qq&quot;&gt;Dropbox to Drafts&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;h3 id=&quot;send-dostodrafts-cmdlet&quot;&gt;Send-DosToDrafts cmdlet&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This cmdlet works with PowerShell commands entered as command line arguments or other PowerShell commands piped to Send-DosToDrafts.&lt;/li&gt;
+  &lt;li&gt;Running as a command line argument:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c1&quot;&gt;# Outputs the command results to the current window and creates a text file with the output in ~/Dropbox/Drafts&lt;/span&gt;
+Send-DosToDrafts &lt;span class=&quot;nb&quot;&gt;Get-ChildItem&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Running as piped commands:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c1&quot;&gt;# Outputs the command results to the current window and creates a text file with the output in ~/Dropbox/Drafts&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;Get-ChildItem&lt;/span&gt; | Send-DosToDrafts
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;send-clipboardtodrafts-cmdlet&quot;&gt;Send-ClipboardToDrafts cmdlet&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Copy text to clipboard &amp;amp; run Send-ClipboardToDrafts.&lt;/li&gt;
+  &lt;li&gt;I made a Windows shortcut that runs &lt;em&gt;Send-ClipboardToDrafts&lt;/em&gt; in a minimized PowerShell window.  That provides a quick icon to click.  In the future I may develop a C# app for the system tray.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/p7th0n/WindowsToDrafts&quot;&gt;WindowsToDrafts on GitHub&lt;/a&gt;. This repo has the source for the Drafts app Action.&lt;/li&gt;
+  &lt;li&gt;Other notes and references for the module.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/p7th0n/Send-ToDrafts&quot;&gt;&lt;img src=&quot;https://github.com/favicon.ico&quot; alt=&quot;octocat&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Summary</summary></entry><entry><title type="html">Windows To Drafts</title><link href="https://www.davekurman.com'/2017/11/20/windows-to-drafts/" rel="alternate" type="text/html" title="Windows To Drafts" /><published>2017-11-20T00:00:00-05:00</published><updated>2017-11-20T00:00:00-05:00</updated><id>https://www.davekurman.com'/2017/11/20/windows-to-drafts</id><content type="html" xml:base="https://www.davekurman.com'/2017/11/20/windows-to-drafts/">&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Like the tagline says, where text starts. It is such a handy app and concept. But I spend a lot of time in Windows.&lt;/li&gt;
+  &lt;li&gt;Get content from Windows into Drafts App&lt;/li&gt;
+  &lt;li&gt;Get Windows command line output to Drafts. Wrapper scripts take commands and redirect output to a Dropbox file, overwriting previous content.&lt;/li&gt;
+  &lt;li&gt;Copy the content from &lt;em&gt;DropboxToDrafts.js&lt;/em&gt; to a Drafts action.&lt;/li&gt;
+  &lt;li&gt;Or import from the &lt;a href=&quot;https://actions.getdrafts.com/a/1Qq&quot;&gt;Drafts Actions&lt;/a&gt; directory.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ideas&quot;&gt;Ideas&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Develop a process to create Drafts with content from existing files.  This is useful with the iOS Workflow/Shortcuts app too.  And iOS Shortcuts are easy to automate with Siri voice commands.&lt;/li&gt;
+  &lt;li&gt;Instead of using one file, use a single purpose folder. Drafts checks all files. When the Drafts action imports the draft it will erase the content.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;problems&quot;&gt;Problems&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DOS file formats (CR/LF). I use a dos2unix function in the PowerShell profile to fix file format issues.&lt;/li&gt;
+  &lt;li&gt;Drafts App is iOS and macOS beta only.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forums.getdrafts.com/t/examples-of-use-of-new-dropbox-integration/2572&quot;&gt;Drafts Community forum&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.dropbox.com/developers/documentation/http/documentation#files-list_folder&quot;&gt;Dropbox v2 /list_folder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.dropbox.com/developers/documentation/http/documentation#files-delete&quot;&gt;Dropbox v2 /delete&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/p7th0n/WindowsToDrafts&quot;&gt;&lt;img src=&quot;https://github.com/favicon.ico&quot; alt=&quot;octocat&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Getting Started</summary></entry><entry><title type="html">Powershell Profile</title><link href="https://www.davekurman.com'/2017/11/14/powershell-profile/" rel="alternate" type="text/html" title="Powershell Profile" /><published>2017-11-14T00:00:00-05:00</published><updated>2017-11-14T00:00:00-05:00</updated><id>https://www.davekurman.com'/2017/11/14/powershell-profile</id><content type="html" xml:base="https://www.davekurman.com'/2017/11/14/powershell-profile/">&lt;p&gt;This is my Powershell profile.&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Installation process: clone or copy to $env:USERPROFILE\Documents\WindowsPowerShell.  Or just cherry pick pieces.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c1&quot;&gt;# run as administrator&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;Set-ExecutionPolicy &lt;/span&gt;RemoteSigned
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Software dependencies: Windows 10, 8 or 7&lt;/li&gt;
+  &lt;li&gt;Read about Posh-Git if you are a Git user – &lt;a href=&quot;https://github.com/dahlbyk/posh-git&quot;&gt;GitHub&lt;/a&gt;, &lt;a href=&quot;https://haacked.com/archive/2011/12/13/better-git-with-powershell.aspx/&quot;&gt;Better Git with PowerShell - You’ve been Haacked&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The Profile is a good place for command line aliases for commands not included in Powershell. Examples are like Windows cmd commands, shortened commands to save on typing.&lt;/li&gt;
+  &lt;li&gt;For longer aliases or commands, Powershell functions work well.  Look at &lt;strong&gt;Remove-Service&lt;/strong&gt; in the Profile for an example of a &lt;em&gt;missing&lt;/em&gt; Powershell command.&lt;/li&gt;
+  &lt;li&gt;Keep in mind – if the Profile gets too bloated Powershell start up is slow. Running &lt;em&gt;ngen.ps1&lt;/em&gt; can shorten the PowerShell startup as well as other dotNet apps.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/developer/cmdlet/approved-verbs-for-windows-powershell-commands&quot;&gt;Approved Verbs for PowerShell Commands&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;modules&quot;&gt;Modules&lt;/h2&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c1&quot;&gt;# run Get-InstalledModule for a list of installed modules&lt;/span&gt;
+
+Get-InstalledModule
+
+&lt;span class=&quot;c1&quot;&gt;# ######## sample output ########&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Version              Name                                Repository           Description&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# -------              ----                                ----------           -----------&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 1.0.1.2              newtonsoft.json                     PSGallery            Serialize/Deserialize Json&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 2.0.223              oh-my-posh                          PSGallery            Theming capabilities&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 1.1.7.2              PackageManagement                   PSGallery            PackageManagement&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 0.7.1                posh-docker                         PSGallery            Powershell tab completion&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 0.7.3                posh-git                            PSGallery            Provides prompt with Git status&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 1.6.6                PowerShellGet                       PSGallery            PowerShell module with commands&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# run Set-PSRepository to trust PSGallery&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;Set&lt;/span&gt;-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
+&lt;span class=&quot;c1&quot;&gt;# run Install-Module to install the modules&lt;/span&gt;
+
+Install-Module posh-git
+
+&lt;span class=&quot;c1&quot;&gt;# run to update modules&lt;/span&gt;
+
+Update-Module PowerShellGet
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/PowerShell/PowerShellGet&quot;&gt;PowerShellGet - GitHub&lt;/a&gt;, &lt;a href=&quot;https://www.powershellgallery.com/packages/PowerShellGet/1.6.7&quot;&gt;PowerShellGet - Powershell Gallery&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.powershellgallery.com/packages/newtonsoft.json/1.0.1/Content/newtonsoft.json.psm1&quot;&gt;newtonsoft.json - Powershell Gallery&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/JanDeDobbeleer/oh-my-posh&quot;&gt;oh-my-posh - GitHub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/samneirinck/posh-docker&quot;&gt;posh-docker - GitHub&lt;/a&gt;, &lt;a href=&quot;https://www.powershellgallery.com/packages/posh-docker/0.6.0&quot;&gt;posh-docker - Powershell Gallery&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/dahlbyk/posh-git&quot;&gt;posh-git - GitHub&lt;/a&gt;, &lt;a href=&quot;https://www.powershellgallery.com/packages/posh-git/0.7.1&quot;&gt;posh-git - Powershell Gallery&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;contribute&quot;&gt;Contribute&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Provide feedback or suggestions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/p7th0n/Powershell-Profile&quot;&gt;&lt;img src=&quot;https://github.com/favicon.ico&quot; alt=&quot;octocat&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This is my Powershell profile.</summary></entry><entry><title type="html">Org-mode Capture from Drafts App</title><link href="https://www.davekurman.com'/2017/09/25/orgmode-capture-from-draftsapp/" rel="alternate" type="text/html" title="Org-mode Capture from Drafts App" /><published>2017-09-25T00:00:00-04:00</published><updated>2017-09-25T00:00:00-04:00</updated><id>https://www.davekurman.com'/2017/09/25/orgmode-capture-from-draftsapp</id><content type="html" xml:base="https://www.davekurman.com'/2017/09/25/orgmode-capture-from-draftsapp/">&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Capture text from iOS &lt;a href=&quot;https://getdrafts.com/&quot;&gt;Drafts app&lt;/a&gt; into Org-mode.&lt;/li&gt;
+  &lt;li&gt;Add org-mode style tags from your &lt;a href=&quot;https://vimeo.com/276105416&quot;&gt;Drafts tags&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Drafts keyboard macros to insert scheduled and deadline dates and code blocks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Get the &lt;a href=&quot;https://getdrafts.com/&quot;&gt;Drafts app&lt;/a&gt; for iPhone or iPad.&lt;/li&gt;
+  &lt;li&gt;Get &lt;a href=&quot;https://actions.getdrafts.com/a/1Pd&quot;&gt;Org-mode capture&lt;/a&gt; action for Drafts from the iOS device.&lt;/li&gt;
+  &lt;li&gt;Change the Dropbox (second) step to your target org file.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dropbox-second-step&quot;&gt;Dropbox (second step)&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+fileNameTemplate:   Test.inbox.org      &lt;span class=&quot;c&quot;&gt;# &amp;lt;&amp;lt;&amp;lt; change to your target org file&lt;/span&gt;
+folderTemplate:     /Notes              &lt;span class=&quot;c&quot;&gt;# &amp;lt;&amp;lt;&amp;lt; change to your org folder on Dropbox&lt;/span&gt;
+template:
+
+            &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;title]]
+
+            &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;body]]
+            :PROPERTIES:
+            :Created:  &lt;span class=&quot;o&quot;&gt;[[[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]]]&lt;/span&gt;
+            :END:
+
+writeType:          prepend
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Drafts app is great for quickly capturing any kind of text.  Like the tagline says, &lt;em&gt;Where Text Starts.&lt;/em&gt;  Decide later whether it is email, text, tweet or whatever.&lt;/li&gt;
+  &lt;li&gt;This action is for capturing text to Org-mode from iPhones and iPads.&lt;/li&gt;
+  &lt;li&gt;The action converts Drafts tags to Org-mode style tags.&lt;/li&gt;
+  &lt;li&gt;Drafts app is super useful for capturing text from almost any iOS app. This org-mode capture action is a quick step to getting it into the Org-mode workflow.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://actions.getdrafts.com/g/1Pf&quot;&gt;Org-mode keyboard macros for Drafts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://actions.getdrafts.com/a/1Pd&quot;&gt;Org-mode capture macro for Drafts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://orgmode.org/&quot;&gt;Org-mode&lt;/a&gt;: Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://orgmode.org/manual/Capture.html&quot;&gt;Org-mode Capture&lt;/a&gt;: Capture lets you quickly store notes with little interruption of your work flow.&lt;/li&gt;
+  &lt;li&gt;Looking for Org-mode apps for iOS? Check out &lt;a href=&quot;https://beorgapp.com/&quot;&gt;Beorg&lt;/a&gt; and &lt;a href=&quot;https://mobileorg.github.io/&quot;&gt;MobileOrg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/p7th0n/orgmode_capture_from_draftsapp&quot;&gt;&lt;img src=&quot;https://github.com/favicon.ico&quot; alt=&quot;octocat&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Features</summary></entry><entry><title type="html">Posh Backup Dot Files</title><link href="https://www.davekurman.com'/2017/09/19/posh-backup-dot-files/" rel="alternate" type="text/html" title="Posh Backup Dot Files" /><published>2017-09-19T00:00:00-04:00</published><updated>2017-09-19T00:00:00-04:00</updated><id>https://www.davekurman.com'/2017/09/19/posh-backup-dot-files</id><content type="html" xml:base="https://www.davekurman.com'/2017/09/19/posh-backup-dot-files/">&lt;p&gt;This is a PowerShell script to backup dot files and directories on Windows.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt; dot files can contain sensitive information. Do not clone to a public repo!&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clone this repo.&lt;/li&gt;
+  &lt;li&gt;Edit the backup_list.txt file.  Add your dot files.&lt;/li&gt;
+  &lt;li&gt;Run &lt;strong&gt;posh_backup_dot_files.ps1&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;details&quot;&gt;Details&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The script copies dot files and directories to the ./backup subdirectory.&lt;/li&gt;
+  &lt;li&gt;It checks for changes and uses git to add and commit the changes.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;If your dot files contain sensitive information do not clone to a public repository.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Feedback and suggestions are welcome.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/p7th0n/posh_backup_dot_files&quot;&gt;&lt;img src=&quot;https://github.com/favicon.ico&quot; alt=&quot;octocat&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a PowerShell script to backup dot files and directories on Windows.</summary></entry><entry><title type="html">Check for locked files</title><link href="https://www.davekurman.com'/2017/07/who-has-that-damn-excel-file-locked/" rel="alternate" type="text/html" title="Check for locked files" /><published>2017-07-12T16:36:24-04:00</published><updated>2017-07-12T16:36:24-04:00</updated><id>https://www.davekurman.com'/2017/07/check-for-locked-files</id><content type="html" xml:base="https://www.davekurman.com'/2017/07/who-has-that-damn-excel-file-locked/">&lt;p&gt;Companies work from Excel, Word and other files on network shared folders. More than one user cannot usually work on these files at the same time. Time is lost tracking down who has the file locked.&lt;/p&gt;
+
+&lt;p&gt;It can be hard to see who has a file locked. Sometimes Excel or Word shows who. But not always. Other files like shared PDF’s and CAD file types do not help much.&lt;/p&gt;
+
+&lt;p&gt;One way to see who locked a file is from the Windows file server as Administrator. Not practical for security reasons.&lt;/p&gt;
+
+&lt;p&gt;This tool has two parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A watcher that checks for locked files. The watcher uses a search list for &lt;em&gt;watched&lt;/em&gt; files and folders.&lt;/li&gt;
+  &lt;li&gt;A web server that displays the locked files and who locked them. No need for special access. Just check a web page.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;quick-setup&quot;&gt;Quick setup&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clone or download and extract this &lt;a href=&quot;https://github.com/p7th0n/check_for_locked_files&quot;&gt;Github repo&lt;/a&gt; to a folder on the file server.&lt;/li&gt;
+  &lt;li&gt;Make sure &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;NodeJS&lt;/a&gt; and npm are installed and on the PATH. Open a command line to the repo location and run &lt;strong&gt;npm install&lt;/strong&gt; to initialize.&lt;/li&gt;
+  &lt;li&gt;From the same command line start the web server – &lt;strong&gt;npm start&lt;/strong&gt;. By default it runs on port 80 so if that is a problem edit &lt;em&gt;package.json&lt;/em&gt; &lt;em&gt;scripts/start&lt;/em&gt;. Visit &lt;a href=&quot;http://fileserver-name/&quot;&gt;http://fileserver-name&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;In a separate command line start File lock watcher &lt;strong&gt;npm run watch&lt;/strong&gt; [requires &lt;em&gt;&lt;strong&gt;Administrator&lt;/strong&gt;&lt;/em&gt; privledges]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/p7th0n/check_for_locked_files/raw/master/wwwroot/assets/img/check-lock-files-screenshot.png&quot; alt=&quot;screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/p7th0n/check_for_locked_files&quot;&gt;&lt;img src=&quot;https://github.com/favicon.ico&quot; alt=&quot;octocat&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>dave</name></author><summary type="html">Companies work from Excel, Word and other files on network shared folders. More than one user cannot usually work on these files at the same time. Time is lost tracking down who has the file locked.</summary></entry><entry><title type="html">getTP – Get Source Code TODO’s for a TaskPaper formatted file</title><link href="https://www.davekurman.com'/2017/06/gettp-get-source-code-todos-for-a-taskpaper-formatted-file/" rel="alternate" type="text/html" title="getTP -- Get Source Code TODO's for a TaskPaper formatted file" /><published>2017-06-25T13:28:33-04:00</published><updated>2017-06-25T13:28:33-04:00</updated><id>https://www.davekurman.com'/2017/06/gettp-get-source-code-todos-for-a-taskpaper-formatted-file</id><content type="html" xml:base="https://www.davekurman.com'/2017/06/gettp-get-source-code-todos-for-a-taskpaper-formatted-file/">&lt;p&gt;This is a quick and simple Python script that uses &lt;a href=&quot;https://github.com/ggreer/the_silver_searcher&quot;&gt;Ag – The Silver Searcher&lt;/a&gt; to find ‘TODO’ items in a source tree.&lt;/p&gt;
+
+&lt;p&gt;The output is formatted for the &lt;a href=&quot;https://www.taskpaper.com/&quot;&gt;TaskPaper&lt;/a&gt; plain text format and sent to stdout. The output can be piped to a .taskpaper file.&lt;/p&gt;
+
+&lt;p&gt;Nothing fancy. Ag is super fast and does the heavy lifting. The Python code formats the Ag format to TaskPaper.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The current directory name is used for the root project name.&lt;/li&gt;
+  &lt;li&gt;Each file with TODO’s are sub-projects. The sub-project names include relative directories.&lt;/li&gt;
+  &lt;li&gt;Tasks begin with the line number of the TODO.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  &lt;span class=&quot;na&quot;&gt;gettp&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+
+    &lt;span class=&quot;s&quot;&gt;getTP.py&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;2    Combine TODO's to a TaskPaper list&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;8    todo_command = 'ag TODO'&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;13   Use Ag Silver Searcher to find TODO comments in source&lt;/span&gt;
+
+    &lt;span class=&quot;s&quot;&gt;README.md&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# getTP - Get Source Code TODO's for a TaskPaper formatted file&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;3    This is a quick and simple Python script that uses [Ag - The Silver Searcher]...&lt;/span&gt;
+
+    &lt;span class=&quot;s&quot;&gt;sample//test.md&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;5    * TODO&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Ad &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;a ad Lorem quis et quis in in laborum incididunt adipisicing occaecat id voluptate.&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/p7th0n/clipboardlink&quot;&gt;&lt;img src=&quot;https://github.com/favicon.ico&quot; alt=&quot;octocat&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>dave</name></author><summary type="html">This is a quick and simple Python script that uses Ag – The Silver Searcher to find ‘TODO’ items in a source tree.</summary></entry><entry><title type="html">BFG Repo-Cleaner</title><link href="https://www.davekurman.com'/2017/05/bfg-repo-cleaner/" rel="alternate" type="text/html" title="BFG Repo-Cleaner" /><published>2017-05-30T12:43:25-04:00</published><updated>2017-05-30T12:43:25-04:00</updated><id>https://www.davekurman.com'/2017/05/bfg-repo-cleaner</id><content type="html" xml:base="https://www.davekurman.com'/2017/05/bfg-repo-cleaner/">&lt;h2 id=&quot;bfg-repo-cleaner-is-a-good-tool-to-clean-up-a-git-repository-before-sharing&quot;&gt;&lt;a href=&quot;https://rtyley.github.io/bfg-repo-cleaner/&quot;&gt;BFG Repo-Cleaner&lt;/a&gt; is a good tool to clean up a Git repository before sharing&lt;/h2&gt;
+
+&lt;p&gt;Removes large or troublesome blobs like git-filter-branch does, but faster. And written in Scala.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+bfg &lt;span class=&quot;nt&quot;&gt;--strip-blobs-bigger-than&lt;/span&gt; 100M &lt;span class=&quot;nt&quot;&gt;--replace-text&lt;/span&gt; banned.txt repo.git
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Replace all passwords and listed in a file &lt;em&gt;(prefix lines ‘regex:’; or ‘glob:’; if required)&lt;/em&gt; with &lt;code class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;span class=&quot;k&quot;&gt;***&lt;/span&gt;REMOVED&lt;span class=&quot;k&quot;&gt;***&lt;/span&gt;&lt;/code&gt; wherever they occur in your repository :&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+bfg &lt;span class=&quot;nt&quot;&gt;--replace-text&lt;/span&gt; passwords.txt  my-repo.git
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Delete all files named ‘id_rsa’ or id_dsa’ :&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+bfg &lt;span class=&quot;nt&quot;&gt;--delete-files&lt;/span&gt; id_&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;dsa,rsa&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; my-repo.git
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;using-bfg-on-windows&quot;&gt;Using BFG on Windows&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use &lt;a href=&quot;https://superuser.com/questions/1053633/what-is-git-bash-for-windows-anyway&quot;&gt;Git Bash&lt;/a&gt; or &lt;a href=&quot;https://msdn.microsoft.com/en-us/commandline/wsl/install_guide&quot;&gt;Windows 10 Bash&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Download and install Java from &lt;a href=&quot;https://www.java.com/en/download/manual.jsp&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Download BFG &lt;a href=&quot;https://search.maven.org/remote_content?g=com.madgag&amp;amp;a=bfg&amp;amp;v=LATEST&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Make an alias for BFG:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; bfg.jar &lt;span class=&quot;nv&quot;&gt;$*&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make a replace.txt file:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+PASSWORD        &lt;span class=&quot;c&quot;&gt;# Replaces PASSWORD with ***REMOVED***&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&amp;gt;&lt;/span&gt;TEST &lt;span class=&quot;c&quot;&gt;# Replaces PASSWORD with TEST&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PASSWORD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&amp;gt;&lt;/span&gt;     &lt;span class=&quot;c&quot;&gt;# Replaces PASSWORD with blank&lt;/span&gt;
+                &lt;span class=&quot;c&quot;&gt;# You can use Regular Expressions also&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run this command in the repo folder from Git Bash or Win10 Bash:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+bfg &lt;span class=&quot;nt&quot;&gt;--replace-text&lt;/span&gt; replace.txt
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When bfg is done run these commands&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+git reflog expire &lt;span class=&quot;nt&quot;&gt;-expire&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;now &lt;span class=&quot;nt&quot;&gt;-all&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git gc &lt;span class=&quot;nt&quot;&gt;-prune&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;now &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; aggressive
+
+git push                   &lt;span class=&quot;c&quot;&gt;# -f may be needed&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I had already pushed the repo and shared it.  That got complicated by multiple branches.  My fault.  It would have been much simpler to run bfg before sharing.&lt;/li&gt;
+  &lt;li&gt;I fumbled a bit trying to get bfg running in Windows command shell.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/tagged/bfg-repo-cleaner&quot;&gt;StackOverflow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/tagged/bfg-repo-cleaner&quot;&gt;Removing Keys, Passwords and Other Sensitive Data from Old Github Commits on OSX&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rtyley.github.io/bfg-repo-cleaner/&quot;&gt;BFG Repo-Cleaner – Removes large or troublesome blobs like git-filter-branch does, but faster. And written in Scala.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/IBM/BluePic/wiki/Using-BFG-Repo-Cleaner-tool-to-remove-sensitive-files-from-your-git-repo&quot;&gt;Using BFG Repo Cleaner tool to remove sensitive files from your git repo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/IBM/BluePic/wiki/Using-BFG-Repo-Cleaner-tool-to-remove-sensitive-files-from-your-git-repo&quot;&gt;The BFG Repo Cleaner&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>dave</name></author><summary type="html">BFG Repo-Cleaner is a good tool to clean up a Git repository before sharing</summary></entry><entry><title type="html">Microsoft Windows File Server Locked File Watcher</title><link href="https://www.davekurman.com'/2017/05/microsoft-windows-file-server-locked-file-watcher/" rel="alternate" type="text/html" title="Microsoft Windows File Server Locked File Watcher" /><published>2017-05-29T16:43:06-04:00</published><updated>2017-05-29T16:43:06-04:00</updated><id>https://www.davekurman.com'/2017/05/microsoft-windows-file-server-locked-file-watcher</id><content type="html" xml:base="https://www.davekurman.com'/2017/05/microsoft-windows-file-server-locked-file-watcher/">&lt;ul&gt;
+  &lt;li&gt;It is common for companies to work with Excel, Word and other files on Windows network shared folders.&lt;/li&gt;
+  &lt;li&gt;More than one user cannot usually work on files like Excel at the same time.&lt;/li&gt;
+  &lt;li&gt;When trying to open a locked network file it can be hard to see who has it locked.&lt;/li&gt;
+  &lt;li&gt;The best method to see who has a file locked is from the Windows file server. But that requires Administrator level access. That level of access is not practical for all users for security reasons.&lt;/li&gt;
+  &lt;li&gt;This tool has two parts:&lt;/li&gt;
+  &lt;li&gt;A Powershell process that watches for locked files and saves the result.&lt;/li&gt;
+  &lt;li&gt;A web server that displays the locked files and who has them locked.&lt;/li&gt;
+  &lt;li&gt;No special access is required to view the web results.The Powershell process uses&lt;/li&gt;
+  &lt;li&gt;The Powershell process uses a list of &lt;em&gt;watched&lt;/em&gt; files and folders. This limits the number of files displayed. This also allows it to avoid showing sensitive files or network folders.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Visit &lt;a href=&quot;https://github.com/p7th0n/check_for_locked_files&quot;&gt;Github&lt;/a&gt; to download.&lt;/p&gt;</content><author><name>dave</name></author><summary type="html">It is common for companies to work with Excel, Word and other files on Windows network shared folders. More than one user cannot usually work on files like Excel at the same time. When trying to open a locked network file it can be hard to see who has it locked. The best method to see who has a file locked is from the Windows file server. But that requires Administrator level access. That level of access is not practical for all users for security reasons. This tool has two parts: A Powershell process that watches for locked files and saves the result. A web server that displays the locked files and who has them locked. No special access is required to view the web results.The Powershell process uses The Powershell process uses a list of watched files and folders. This limits the number of files displayed. This also allows it to avoid showing sensitive files or network folders.</summary></entry><entry><title type="html">Cliplink – a utility for short, reliable links on Windows networks</title><link href="https://www.davekurman.com'/2017/04/cliplink-a-utility-for-short-reliable-links-on-windows-networks/" rel="alternate" type="text/html" title="Cliplink -- a utility for short, reliable links on Windows networks" /><published>2017-04-06T18:46:20-04:00</published><updated>2017-04-06T18:46:20-04:00</updated><id>https://www.davekurman.com'/2017/04/cliplink-a-utility-for-short-reliable-links-on-windows-networks</id><content type="html" xml:base="https://www.davekurman.com'/2017/04/cliplink-a-utility-for-short-reliable-links-on-windows-networks/">&lt;h3 id=&quot;what-is-cliplink-for&quot;&gt;What is Cliplink for&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Users wanted a way to create reliable links to files and folders on Windows network drives.&lt;/li&gt;
+  &lt;li&gt;Spaces and special characters break Outlook’s hyperlinks to network files. Clipboard-Link fixes that problem.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-do-i-get-set-up&quot;&gt;&lt;a href=&quot;https://github.com/p7th0n/clipboardlink#how-do-i-get-set-up&quot;&gt;&lt;/a&gt;How do I get set up&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Get Cliplink from =&amp;gt; &lt;strong&gt;&lt;a href=&quot;https://github.com/p7th0n/clipboardlink&quot;&gt;GitHub&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;There is no configuration&lt;/li&gt;
+  &lt;li&gt;There are no dependencies&lt;/li&gt;
+  &lt;li&gt;No database configuration&lt;/li&gt;
+  &lt;li&gt;Save the contents of this repo to a network drive or share.&lt;/li&gt;
+  &lt;li&gt;Tell users to run &lt;strong&gt;setup&lt;/strong&gt; from there.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-does-it-work&quot;&gt;&lt;a href=&quot;https://github.com/p7th0n/clipboardlink#how-does-it-work&quot;&gt;&lt;/a&gt;How does it work&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Locate the file or folder on the network.&lt;/li&gt;
+  &lt;li&gt;Right-click and select &lt;strong&gt;Send To&lt;/strong&gt; &amp;gt; &lt;strong&gt;clipboard-link&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Cliplink creates a safe link to the file and puts it on the Clipboard.&lt;/li&gt;
+  &lt;li&gt;Paste the link into Email, documents, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;to-make-a-friendly-link&quot;&gt;&lt;a href=&quot;https://github.com/p7th0n/clipboardlink#to-make-a-friendly-link&quot;&gt;&lt;/a&gt;To make a friendly link&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create a link to a network file or folder with Clipboard-link and paste into a message&lt;/li&gt;
+  &lt;li&gt;Select the link part and Cut&lt;/li&gt;
+  &lt;li&gt;Select the name part between the brackets&lt;/li&gt;
+  &lt;li&gt;Select Insert menu &amp;gt; Hyperlink&lt;/li&gt;
+  &lt;li&gt;Paste the link in the URL box&lt;/li&gt;
+  &lt;li&gt;Click Ok&lt;/li&gt;
+  &lt;li&gt;Clipboard-link copies the file/folder name and shortened link to the clipboard&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Engineering Documentation]                  file://F:&lt;span class=&quot;se&quot;&gt;\E&lt;/span&gt;NGINE~1
+
+          ^ Name ^                               ^   &lt;span class=&quot;nb&quot;&gt;link&lt;/span&gt;  ^
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;NOTE: **Cliplink will not create links for executables [files ending with EXE, COM, BAT, etc.].&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/p7th0n/clipboardlink&quot;&gt;&lt;img src=&quot;https://github.com/favicon.ico&quot; alt=&quot;octocat&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>dave</name></author><summary type="html">What is Cliplink for</summary></entry></feed>

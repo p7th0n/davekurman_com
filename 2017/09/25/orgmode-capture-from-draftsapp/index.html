@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Org-mode Capture from Drafts App &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/rouge.css">
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12118444-14"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-12118444-14');
+  </script>
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          
+        </a>
+      </h1>
+      <p class="lead">Dave Kurman / Computer Systems Analyst / Expertise in computer programming, database, web development, system administration
+</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/contact/">Contact</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/deerhub/">Deerhub</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/omega-design-corporation/">Omega Design Corporation</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/quebecor-world-printing/">Quebecor World Printing</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/vanguard-id-systems/">Vanguard ID Systems</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/wallace-deer-management-association-website/">WDMA</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+
+    <div class="contact-info">
+        <a href="https://www.linkedin.com/in/davekurman/" target="_blank" title="  Dave Kurman - LinkedIn  ">
+            <img src="/public/linkedin-logo.png">
+        </a>
+        <a href="https://github.com/p7th0n" target="_blank" title="  Dave Kurman - Github  ">
+            <img src="/public/GitHub_Logo_White.png">
+        </a>
+        <a href="https://twitter.com/davekurman" target="_blank" title="  Dave Kurman - Twitter  ">
+            <img src="/public/twitter-logo.png">
+        </a>
+    </div>
+
+
+      <span class="sidebar-nav-item">v 1.3</span>
+    </nav>
+
+    <p>&copy; 2024. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Org-mode Capture from Drafts App</h1>
+  <span class="post-date">25 Sep 2017</span>
+  <h2 id="features">Features</h2>
+
+<ul>
+  <li>Capture text from iOS <a href="https://getdrafts.com/">Drafts app</a> into Org-mode.</li>
+  <li>Add org-mode style tags from your <a href="https://vimeo.com/276105416">Drafts tags</a>.</li>
+  <li>Drafts keyboard macros to insert scheduled and deadline dates and code blocks.</li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<ul>
+  <li>Get the <a href="https://getdrafts.com/">Drafts app</a> for iPhone or iPad.</li>
+  <li>Get <a href="https://actions.getdrafts.com/a/1Pd">Org-mode capture</a> action for Drafts from the iOS device.</li>
+  <li>Change the Dropbox (second) step to your target org file.</li>
+</ul>
+
+<h3 id="dropbox-second-step">Dropbox (second step)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+fileNameTemplate:   Test.inbox.org      <span class="c"># &lt;&lt;&lt; change to your target org file</span>
+folderTemplate:     /Notes              <span class="c"># &lt;&lt;&lt; change to your org folder on Dropbox</span>
+template:
+
+            <span class="k">*</span> <span class="o">[[</span>title]]
+
+            <span class="o">[[</span>body]]
+            :PROPERTIES:
+            :Created:  <span class="o">[[[</span><span class="nb">date</span><span class="o">]]]</span> <span class="o">[[[</span><span class="nb">time</span><span class="o">]]]</span>
+            :END:
+
+writeType:          prepend
+
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+
+<ul>
+  <li>The Drafts app is great for quickly capturing any kind of text.  Like the tagline says, <em>Where Text Starts.</em>  Decide later whether it is email, text, tweet or whatever.</li>
+  <li>This action is for capturing text to Org-mode from iPhones and iPads.</li>
+  <li>The action converts Drafts tags to Org-mode style tags.</li>
+  <li>Drafts app is super useful for capturing text from almost any iOS app. This org-mode capture action is a quick step to getting it into the Org-mode workflow.</li>
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="https://actions.getdrafts.com/g/1Pf">Org-mode keyboard macros for Drafts</a></li>
+  <li><a href="https://actions.getdrafts.com/a/1Pd">Org-mode capture macro for Drafts</a></li>
+  <li><a href="https://orgmode.org/">Org-mode</a>: Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system.</li>
+  <li><a href="https://orgmode.org/manual/Capture.html">Org-mode Capture</a>: Capture lets you quickly store notes with little interruption of your work flow.</li>
+  <li>Looking for Org-mode apps for iOS? Check out <a href="https://beorgapp.com/">Beorg</a> and <a href="https://mobileorg.github.io/">MobileOrg</a></li>
+</ul>
+
+<p><a href="https://github.com/p7th0n/orgmode_capture_from_draftsapp"><img src="https://github.com/favicon.ico" alt="octocat" /></a></p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2024/11/18/tea-glass/">
+            Tea Glass - an AI poem
+            <small>18 Nov 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2024/01/28/got-friends-wilga/">
+            Got Friends Wilga - useful data
+            <small>28 Jan 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2022/07/11/finished-migrated-website/">
+            Finished migrating website
+            <small>11 Jul 2022</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+</html>
